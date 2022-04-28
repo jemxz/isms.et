@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Home</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="css/toastr.min.css">
+    <link rel="stylesheet" href="css/Footer-Basic.css">
+
+    <style>
+        .landing-img {
+            padding: 7%;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+
+        }
+
+        .center-child {
+            text-align: center;
+        }
+
+        .why-container {
+            padding: 2%;
+            text-align: center;
+        }
+
+        .why-icons {
+            font-size: 200%;
+            color: rgb(140, 146, 228);
+            margin: 3%;
+        }
+
+        .why-title {
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .why-desc {
+            font-size: large;
+        }
+
+        .marketing-div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 85%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mark-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .mark-title {
+            font-size: x-large;
+            font-weight: bold;
+            color: rgb(98, 189, 231);
+        }
+
+        .mark-desc {
+            font-size: larger;
+        }
+
+        .fade-element {
+            opacity: 0;
+            margin-top: 5%;
+        }
+    </style>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            .resize_w_screen {
+                object-fit: cover;
+                object-position: 0% 0%;
+                width: 55px;
+                height: 50px;
+            }
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+            background-color: #fdfffd;
+        }
+
+
+        @media screen and (max-width: 767px) {
+            .desktop-only {
+                visibility: hidden;
+                display: none;
+            }
+        }
+
+
+        @media screen and (min-width: 768px) {
+            .mobile-only {
+                visibility: hidden;
+                display: none;
+            }
+        }
+    </style>
+
+
+    <style>
+        .navbar {
+            background-color: #7273dd;
+        }
+
+        .navbar .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: #fbc531;
+        }
+
+        .navbar .navbar-nav .active>.nav-link {
+            color: #fbc531;
+        }
+    </style>
+
+    <style>
+        .page-image img {
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            width: 85%;
+            transform: translate(-50%, -50%);
+
+
+            /* padding: 7%;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto; */
+        }
+    </style>
+
+
+
+
+
+
+
+
+    <style>
+        .footer-dark {
+            padding: 50px 0;
+            color: #f0f9ff;
+            background-color: #3c488a;
+            z-index: 9999;
+        }
+
+        .footer-dark h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .footer-dark ul {
+            padding: 0;
+            list-style: none;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .footer-dark ul a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.6;
+        }
+
+        .footer-dark ul a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width:767px) {
+            .footer-dark .item:not(.social) {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+        }
+
+        .footer-dark .item.text {
+            margin-bottom: 36px;
+        }
+
+        @media (max-width:767px) {
+            .footer-dark .item.text {
+                margin-bottom: 0;
+            }
+        }
+
+        .footer-dark .item.text p {
+            opacity: 0.6;
+            margin-bottom: 0;
+        }
+
+        .footer-dark .item.social {
+            text-align: center;
+        }
+
+        @media (max-width:991px) {
+            .footer-dark .item.social {
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+
+        .footer-dark .item.social>a {
+            font-size: 20px;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+            margin: 0 8px;
+            color: #fff;
+            opacity: 0.75;
+        }
+
+        .footer-dark .item.social>a:hover {
+            opacity: 0.9;
+        }
+
+        .footer-dark .copyright {
+            text-align: center;
+            padding-top: 24px;
+            opacity: 0.3;
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light zero_pad_sandwich">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#"><i class="fa fa-graduation-cap fa-lg mr-2"></i>ISMS ET</a>
+            <table style="border: 0px;">
+                <tbody>
+
+                    <td>
+                        <i class="navbar-dark navbar-toggler zero_pad_sandwich" data-toggle="collapse"
+                            data-target="#navcol-1">
+                            <span class="sr-only">TN</span>
+                            <span class="navbar-toggler-icon"></span>
+                        </i>
+                    </td>
+                </tbody>
+
+            </table>
+            <div class="collapse navbar-collapse zero_pad_sandwich" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+
+
+                    <li class="nav-item pl-1">
+                        <a class="nav-link" href="/accounts/signup"><i class="fa fa-user fa-fw mr-1"></i>Create Account</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <br>
+
+
+    <div style="text-align: center;">
+        <div class="row">
+            <div class="col-md-6" style="padding: 10% 5% 15% 5%">
+                <h2>Welcome To ISMS ET</h2>
+                <p>The Integrated School Management System</p>
+                <a href="/" class="btn btn-lg btn-secondary" style="background-color: #7273DD;">Get Started&ensp;<i
+                        class="fa fa-arrow-right"></i></a>
+            </div>
+            <div class="col-md-5">
+                <div><img class="img-responsive landing-img" src="img/page-pics/landing02.svg"></div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="center-child">
+            <h3> Why ISMS ET?</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-4 why-container">
+                <i class="why-icons fa fa-th-list"></i>&emsp;&emsp;<i class="why-icons fa fa-smile-o"></i>
+                <br />
+                <div class="why-title">CLEAN &amp; SIMPLE</div>
+                <br />
+                <div class="why-desc">Manage your school with our easy to use and clean system!</div>
+            </div>
+            <div class="col-md-4 why-container">
+                <i class="why-icons fa fa-th"></i>&emsp;&emsp;<i class="why-icons fa fa-glide-g"></i>
+                <br />
+                <div class="why-title">FEATUREFUL &amp; FLEXIBLE </div>
+                <br />
+                <div class="why-desc">Full of features and easily customizable school management!</div>
+
+            </div>
+            <div class="col-md-4 why-container">
+                <i class="why-icons fa fa-bolt"></i>&emsp;&emsp;<i class="why-icons fa fa-lock"></i>
+                <br />
+                <div class="why-title">FAST &amp; SECURE</div>
+                <br />
+                <div class="why-desc">Process your data with lightning speed while we worry about its security!</div>
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-6 fade-element">
+                <div><img class="img-responsive landing-img" src="img/page-pics/img_no_paper.png"></div>
+            </div>
+            <div class="col-md-6 center-child mark-container fade-element">
+                <div style="margin: 5%;">
+                    <div class="mark-title">Avoid The Tiring Paperworks</div>
+                    <div class="mark-desc">
+                        Our system can be accessed from your smart phone or any computer devices.
+                        Making it easy to forward any information to everyone.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6 center-child mark-container fade-element">
+                <div style="margin: 5%;">
+                    <div class="mark-title">Organized Data In Few Clicks </div>
+                    <div class="mark-desc">
+                        Our system utilizes state of the art data visualization techinques to
+                        present the information with beautifull charts and graphs with ease </div>
+                </div>
+            </div>
+            <div class="col-md-6 fade-element">
+                <div><img class="img-responsive landing-img" src="img/page-pics/img_charts.svg"></div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6 fade-element">
+                <div><img class="img-responsive landing-img" src="img/page-pics/img_send_message.svg">
+                </div>
+            </div>
+            <div class="col-md-6 center-child mark-container fade-element">
+                <div style="margin: 5%;">
+                    <div class="mark-title">Send Notification To Any Group</div>
+                    <div class="mark-desc">Sending notifications has never been easier. 
+                        You can now send out a brodcast about new annoucments to everyone, specfic group or indiviuals with ease.</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="center-child">
+            <a href="/" class="btn btn-lg btn-secondary" style="background-color: #7273DD;">Get Started For Free&ensp;<i
+                    class="fa fa-arrow-right"></i></a>
+        </div>
+
+        <br>
+        <br>
+
+    </div>
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="item social">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-snapchat"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                </div><br>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Dynamic Club</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
+                            rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum
+                            vel in justo.</p>
+                    </div>
+
+                </div>
+                <p class="copyright">Dynamic Club © 2019</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/web/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                $('.fade-element').each(function (i) {
+
+                    var bottom_of_object = $(this).position().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height() + 200;
+                    if (bottom_of_window > bottom_of_object) {
+
+                        $(this).animate({ 'opacity': '1', 'margin-top': '0' }, 700);
+
+                    }
+                });
+
+            });
+
+        });
+    </script>
+
+
+</body>
+
+</html>
